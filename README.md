@@ -1,6 +1,6 @@
 # Weather App
 
-Une application météo simpliste qui affiche la température et suggère des vêtements adaptés.
+Une application météo simple qui affiche la température et suggère des vêtements adaptés.
 
 ## Installation
 
@@ -14,6 +14,9 @@ npm install
 ```bash
 # Démarrer l'application en mode développement
 npm run dev
+
+# Ou construire l'application pour la production (dans le dossier docs)
+npm run build
 ```
 
 L'application sera accessible à l'adresse [http://localhost:5173](http://localhost:5173)
