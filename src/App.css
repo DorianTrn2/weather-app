@@ -1,0 +1,242 @@
+:root {
+  --bg-light: #f5f8ff;
+  --bg-dark: #1a1a1a;
+  --card-bg-light: white;
+  --card-bg-dark: #2d2d2d;
+  --text-light: #4a90e2;
+  --text-dark: #7eb6ff;
+  --input-bg-light: #f5f8ff;
+  --input-bg-dark: #404040;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+body.light {
+  background-color: var(--bg-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+}
+
+.app {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.app.light {
+  background: var(--card-bg-light);
+}
+
+.app.dark {
+  background: var(--card-bg-dark);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--text-light);
+}
+
+.dark .theme-toggle .icon {
+  color: var(--text-dark);
+}
+
+.search-form {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.light .search-form input {
+  background: var(--input-bg-light);
+  color: #333;
+}
+
+.dark .search-form input {
+  background: var(--input-bg-dark);
+  color: #fff;
+}
+
+.dark .search-form input::placeholder {
+  color: #999;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.light .search-icon {
+  color: #666;
+}
+
+.dark .search-icon {
+  color: #999;
+}
+
+.search-form button {
+  display: none;
+}
+
+.location-btn {
+  display: none;
+}
+
+.weather-info {
+  text-align: center;
+}
+
+.weather-info h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.temperature {
+  font-size: 64px;
+  font-weight: 500;
+  margin: 15px 0;
+  line-height: 1;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.weather-icon {
+  width: 64px;
+  height: 64px;
+  margin: 20px 0;
+}
+
+.clothing-suggestions {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.light .weather-info h2,
+.light .temperature,
+.light .description,
+.light .clothing-suggestions {
+  color: var(--text-light);
+}
+
+.dark .weather-info h2,
+.dark .temperature,
+.dark .description,
+.dark .clothing-suggestions {
+  color: var(--text-dark);
+}
+
+.clothing-suggestions h3 {
+  display: none;
+}
+
+.clothing-suggestions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.clothing-suggestions li {
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+
+
+.details {
+  display: none;
+}
+
+.loading {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.light .loading {
+  color: var(--text-light);
+}
+
+.dark .loading {
+  color: var(--text-dark);
+}
+
+.error {
+  text-align: center;
+  margin: 15px 0;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.light .error {
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.dark .error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+hr {
+  margin: 10px 0;
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+}
